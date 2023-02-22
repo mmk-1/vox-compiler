@@ -1,0 +1,4 @@
+('STRING', 'Helo', 4, 'tmp0')
+('COPY', 'tmp0', 'STRING', 'a')
+('PRINT', 'NULL', 'STRING', 'a')
+('EPILOGUE',)

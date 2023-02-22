@@ -1,0 +1,34 @@
+var c;
+
+fun sum(x,y,z) {
+    var i = 0;
+    print "Inside sum";
+    for (;i < z; i = i + 1) print i;
+    return x;
+}
+
+fun factorial(n) {
+    if (n == 1) {
+        return n;
+    } else {
+        return n * factorial(n-1);
+    }
+}
+
+fun fib(n) {
+    if (n <= 1) {return n;}
+    return fib(n - 1) + fib(n - 2);
+}
+
+
+print "Fibonacci";
+c = fib(10);
+print c;
+
+ print "Factorial";
+c = factorial(7);
+print c;
+
+c = sum(1 + 1, 2, 3);
+print c;
+

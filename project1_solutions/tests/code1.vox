@@ -1,0 +1,15 @@
+var a;
+
+fun lmao(a) {
+    for(a = 10; a > 0 ; a = a - 1) print a;
+    return 9;
+}
+
+a = lmao(8);
+print a;
+
+
+
+
+
+

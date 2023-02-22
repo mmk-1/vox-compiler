@@ -1,0 +1,8 @@
+('OP+', '1', '2', 'tmp0')
+('OP*', '8', '8', 'tmp1')
+('OP+', 'tmp0', 'tmp1', 'tmp2')
+('COPY', 'tmp2', 'NULL', 'a')
+('COPY', 'a', 'NULL', 'b')
+('PRINT', 'NULL', 'NULL', 'a')
+('PRINT', 'NULL', 'NULL', 'b')
+('EPILOGUE',)

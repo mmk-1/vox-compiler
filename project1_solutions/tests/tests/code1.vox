@@ -1,0 +1,9 @@
+
+var a = 1 + 2 + (8 * 8);
+var b;
+
+b = a;
+
+print a;
+print b;
+

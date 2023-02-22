@@ -1,0 +1,4 @@
+('COPY', '1', 'NULL', 'a')
+('COPY', '2', 'NULL', 'b')
+NULL
+('EPILOGUE',)
