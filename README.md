@@ -5,7 +5,7 @@
 ## Running
 To run:  
 1- `bash run <.vox file>`  
-2- `riscv64-unknown-linux-gnu-gcc -march=rv64gcv -static c_helper.c v_helper.s code.s -o main`
+2- `riscv64-unknown-linux-gnu-gcc -march=rv64gcv -static c_helper.c v_helper.s code.s -o main`  
   - code.s is the assembly file generated  
 
 ## Issues:
@@ -29,29 +29,29 @@ Add these to ~/.bashrc:
 
 2. Spike Simulator:
 
-`git clone https://github.com/riscv-software-src/riscv-isa-sim`
-`mkdir riscv-isa-sim/build`
-`cd riscv-isa-sim/build`
-`../configure --prefix=$RISCV`
-`make`
-`[sudo] make install`
+`git clone https://github.com/riscv-software-src/riscv-isa-sim`  
+`mkdir riscv-isa-sim/build`  
+`cd riscv-isa-sim/build`  
+`../configure --prefix=$RISCV`  
+`make`  
+`[sudo] make install`  
 
 3. GNU Toolchain for riscv programs configured for linux kernels - takes a very long time!:
 
-`git clone https://github.com/riscv-collab/riscv-gnu-toolchain`
-`mkdir riscv-gnu-toolchain/build`
-`cd riscv-gnu-toolchain/build`
-`../configure --prefix=$RISCV`
-`make linux`
+`git clone https://github.com/riscv-collab/riscv-gnu-toolchain`  
+`mkdir riscv-gnu-toolchain/build`  
+`cd riscv-gnu-toolchain/build`  
+`../configure --prefix=$RISCV`  
+`make linux`  
 
 4. Proxy Linux Kernel:
 
-`git clone https://github.com/riscv-software-src/riscv-pk`
-`mkdir riscv-pk/build`
-`cd riscv-pk/build`
-`../configure --prefix=$RISCV --host=riscv64-unknown-linux-gnu`
-`make`
-`[sudo] make install`
+`git clone https://github.com/riscv-software-src/riscv-pk`  
+`mkdir riscv-pk/build`  
+`cd riscv-pk/build`  
+`../configure --prefix=$RISCV --host=riscv64-unknown-linux-gnu`  
+`make`  
+`[sudo] make install`  
 
 5. QEMU (emulator for riscv64 user-level programs for linux):
 
