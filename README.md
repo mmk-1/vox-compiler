@@ -24,8 +24,8 @@ To run:
 2. Environment Variables:
 Add these to ~/.bashrc:
 
-`export RISCV="/opt/riscv/"`
-`export PATH="${PATH}:${RISCV}bin/:${RISCV}riscv64-unknown-linux-gnu/bin/"`
+`export RISCV="/opt/riscv/"`  
+`export PATH="${PATH}:${RISCV}bin/:${RISCV}riscv64-unknown-linux-gnu/bin/"`  
 
 2. Spike Simulator:
 
