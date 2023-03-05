@@ -102,39 +102,45 @@ def block_handler(src, instr_list, func_obj, is_func):
     current_scope = envs[current_scope].parent
 
 
-def labeller(instr_list, op_list, label_true, label_false):
-    filt = list()
-    for instr in instr_list:
-        if instr[0].startswith('IF'):
-            filt.append(instr)
-    j = 0
-    print(filt)
-    for i in range(0, len(filt) - 1):
-        op = op_list[j]
-        print(i)
-        if filt[i][0].startswith('IF'):
-            if op == 'or':
-                filt[i] = (filt[i][0], filt[i][1], filt[i][2], label_true)
-                filt[i + 1] = (filt[i + 1][0], filt[i + 1][1], filt[i + 1][2], label_true)
-            else:
-                filt[i] = (filt[i][0], filt[i][1], filt[i][2], label_false)
-                filt[i + 1] = (filt[i + 1][0], filt[i + 1][1], filt[i + 1][2], label_false)
-        j += 1
-    print(filt)
-
 def lbinary_handler(src, instr_list, t_list, f_list):
     op = src.op
     l = src.left
     r = src.right
 
-    code = NULL
-    l = translate(l, instr_list)
-    r = translate(r, instr_list)
+    # code = NULL
 
-    # print(l)
-    # print(r)
+    if type(l) == LBinary:
+        lbinary_handler(l, instr_list, t_list, f_list)
+    else:
+        l = translate(l, instr_list)
+        if type(l) == tuple and len(l) == 1:
+            pass
+        elif l[0].startswith('LPrimary'):
+            instr_list.append(l)
+        elif l[0].startswith('CMP'):
+            instr_list.append(l)
+            # if op == 'or':
+            #     t_list.append()
+            # else:
+            #     f_list.append(r)
+            
 
-    # print(instr_list)
+    if type(r) == LBinary:
+        lbinary_handler(r, instr_list, t_list, f_list)
+    else:
+        r = translate(r, instr_list)
+        if type(r) == tuple and len(r) == 1:
+            pass
+        elif r[0].startswith('LPrimary'):
+            instr_list.append(r)
+        elif r[0].startswith('CMP'):
+            instr_list.append(r)
+            # if op == 'or':
+            #     t_list.append(r)
+            # else:
+            #     f_list.append(r)
+
+
 
 
 
@@ -349,8 +355,10 @@ def translate(src, instr_list):
         false_list = list()
         # If we use and/or (short-circuiting)
         if type(src.condition) == LBinary:
-            print(src.condition)
             lbinary_handler(src.condition, cond_list, true_list, false_list)
+            print(cond_list)
+            print(true_list)
+            print(false_list)
             cond = tuple()
         else: # No short-circuiting
             cond_list = list()
