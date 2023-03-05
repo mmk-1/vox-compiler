@@ -55,12 +55,12 @@ Add these to ~/.bashrc:
 
 5. QEMU (emulator for riscv64 user-level programs for linux):
 
-`wget https://download.qemu.org/qemu-7.2.0-rc4.tar.xz`
-`tar -xf qemu-7.2.0-rc4.tar.xz`
-`mkdir qemu-7.2.0-rc4/build`
-`cd mkdir qemu-7.2.0-rc4/build`
-`../configure --target-list=riscv64-linux-user`
-`make`
-`[sudo] make install`
+`wget https://download.qemu.org/qemu-7.2.0-rc4.tar.xz`  
+`tar -xf qemu-7.2.0-rc4.tar.xz`  
+`mkdir qemu-7.2.0-rc4/build`  
+`cd mkdir qemu-7.2.0-rc4/build`  
+`../configure --target-list=riscv64-linux-user`  
+`make`  
+`[sudo] make install`  
 
 
