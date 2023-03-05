@@ -1,6 +1,6 @@
 # Vox compiler
 - This compiler is for RISC-V architecture. Dockerfile provides the environment with necessary toolchains and simulators to run programs.
-- Alternatively you can install the dependencies locally -> [link](#Install RISC-V locally)
+- Alternatively you can install the dependencies locally -> [link](#Install-RISC-V-locally)
 
 ## Running
 To run:  
