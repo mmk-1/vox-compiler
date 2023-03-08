@@ -1,3 +1,6 @@
+# About
+- This is probably my first attempt at doing a relatively large project from scratch. I learnt a lot along the way but I also wrote code in such a way that got things done. Especially for the backend of the compiler, there is no proper software design. The code may be inefficient and unreadable. I plan on redoing this project (maybe in C or Rust) but this time with proper design and good code.
+
 # Vox compiler
 - This compiler is for RISC-V architecture. Dockerfile provides the environment with necessary toolchains and simulators to run programs.
 - Alternatively you can install the dependencies locally -> [link](#Install-RISC-V-locally)
